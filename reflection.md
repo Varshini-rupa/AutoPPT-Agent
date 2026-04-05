@@ -7,11 +7,9 @@
 
 ## Where Did the Agent Fail Its First Attempt?
 
-Honestly, the first run was a disaster — but in the most educational way possible.
-
 The very first thing that broke was something I didn't even think about: **argument parsing**. When LangChain's ReAct agent calls a tool, it passes the arguments as a plain text string. But my MCP tools were expecting a proper Python dictionary. So when the agent tried to call `add_slide`, it passed something like `title='Life Cycle of a Star', slide_type='title'` with single quotes — which is not valid JSON. The whole thing crashed immediately with a `JSONDecodeError`. I had to build a small parser that tries `json.loads()` first, then fixes single quotes, and finally falls back to `eval()` as a last resort.
 
-The second failure was actually more embarrassing. The agent just... didn't do anything. It would read the prompt, think for a second, and then reply "Here is a 5-slide presentation on stars" — as a chat message. No tools called, no file created, nothing. It was basically just a chatbot pretending to be an agent. The fix was rewriting the entire system prompt to force a **mandatory 4-step loop**: Plan first, then Research, then Build, then Save. Once the prompt made it crystal clear that the agent must not skip Step 1 or answer directly, it finally started behaving like an actual agent.
+The second failure is the agent just... didn't do anything. It would read the prompt, think for a second, and then reply "Here is a 5-slide presentation on stars" — as a chat message. No tools called, no file created, nothing. It was basically just a chatbot pretending to be an agent. The fix was rewriting the entire system prompt to force a **mandatory 4-step loop**: Plan first, then Research, then Build, then Save. Once the prompt made it crystal clear that the agent must not skip Step 1 or answer directly, it finally started behaving like an actual agent.
 
 The third failure was the agent inventing tool names. It would confidently call `create_slide` when the actual tool was called `add_slide`, or `finalize` instead of `save_presentation`. LangChain would throw a `ValueError: Tool not found` and everything stopped. Enabling `handle_parsing_errors=True` helped a lot here — instead of crashing, the agent would receive the error as feedback and try to correct itself.
 
@@ -36,13 +34,13 @@ What I found most powerful was that this separation meant I could improve the sl
 
 ---
 
-## Every Error and Challenge I Faced (Honest Account)
+## Every Error and Challenge I Faced 
 
 This project had way more problems than I expected. Here's what actually happened, in the order I hit them:
 
 ---
 
-**The Python version nightmare** came first. I already had Python 3.14 installed, which turned out to be too new for almost every package I needed. None of the wheels existed for it yet. I had to install Python 3.11.5 separately and create a virtual environment that specifically used 3.11. Thankfully Windows lets you have multiple Python versions at once, so nothing got broken.
+**The Python version problem** came first. I already had Python 3.14 installed, which turned out to be too new for almost every package I needed. None of the wheels existed for it yet. I had to install Python 3.11.5 separately and create a virtual environment that specifically used 3.11. I got to know that Lang chain is much compatible with python 3.11 version
 
 **A fake package in requirements.txt** was embarrassing. I had `asyncio-compat>=0.1.0` listed as a dependency. It doesn't exist. `asyncio` is just built into Python. Had to remove it and install everything else manually.
 
