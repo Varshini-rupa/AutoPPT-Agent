@@ -9,7 +9,7 @@
 
 ---
 
-## 📽️ Showcase & Demo
+## 📽️ Demo Video
 [Watch the Demo](https://drive.google.com/drive/folders/1IJmTzRCD9qXs3-V_WXXVNWaQ_YBw3zwP?usp=drive_link)
 
 ---
