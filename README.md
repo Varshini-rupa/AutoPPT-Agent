@@ -27,7 +27,7 @@ auto_ppt_agent/
 ├── agent_ppt.py          # Core Agent Brain – LangChain ReAct orchestration
 ├── pptx_mcp_server.py    # MCP Server (Hands) – Premium PPTX drawing tools
 ├── search_mcp_server.py  # MCP Server (Eyes) – Real-time web research
-├── .env                  # Environment Config – Secure credentials & model settings
+├── .env.example          # Environment Config – Secure credentials & model settings templete
 ├── .gitignore            # Git Exclusions – Prevents sensitive file leakage
 ├── requirements.txt      # Dependencies – Project-specific libraries
 ├── workspace/            # Project Output – Where your .pptx files are saved
