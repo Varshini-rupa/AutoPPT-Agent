@@ -120,8 +120,3 @@ python agent_ppt.py "Create a 5-slide deck on Quantum Computing for beginners"
 ```
 
 ---
-
-## 📜 License & Credits
-Licensed under **MIT**. Built with ❤️ using LangChain, Gemini 3.1, and the Model Context Protocol.
-
-**Happy Presenting!** ✦🪄🎥
