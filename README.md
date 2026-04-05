@@ -11,7 +11,6 @@
 
 ## 📽️ Showcase & Demo
 [Watch the Demo](https://drive.google.com/drive/folders/1IJmTzRCD9qXs3-V_WXXVNWaQ_YBw3zwP?usp=drive_link)
-> **Replace `YOUR_VIDEO_ID_HERE` with your actual video link to showcase the agent in action!**
 
 ---
 
