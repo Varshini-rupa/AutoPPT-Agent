@@ -2,7 +2,7 @@
 
 > **Assignment:** AI Agents & MCP Architecture  
 > **Course:** AI Agents & MCP Architecture  
-> **Author:** Varshini  
+>  Varshini  
 
 ---
 
