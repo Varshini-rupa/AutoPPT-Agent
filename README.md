@@ -9,9 +9,8 @@
 
 ---
 
-## 📽️ Showcase & Demo
-[![Watch the Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID_HERE/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID_HERE)
-> **Replace `YOUR_VIDEO_ID_HERE` with your actual video link to showcase the agent in action!**
+## 📽️ Demo Video
+[Watch the Demo](https://drive.google.com/drive/folders/1IJmTzRCD9qXs3-V_WXXVNWaQ_YBw3zwP?usp=drive_link)
 
 ---
 
@@ -27,7 +26,7 @@ auto_ppt_agent/
 ├── agent_ppt.py          # Core Agent Brain – LangChain ReAct orchestration
 ├── pptx_mcp_server.py    # MCP Server (Hands) – Premium PPTX drawing tools
 ├── search_mcp_server.py  # MCP Server (Eyes) – Real-time web research
-├── .env                  # Environment Config – Secure credentials & model settings
+├── .env.example          # Environment Config – Secure credentials & model settings templete
 ├── .gitignore            # Git Exclusions – Prevents sensitive file leakage
 ├── requirements.txt      # Dependencies – Project-specific libraries
 ├── workspace/            # Project Output – Where your .pptx files are saved
@@ -120,8 +119,3 @@ python agent_ppt.py "Create a 5-slide deck on Quantum Computing for beginners"
 ```
 
 ---
-
-## 📜 License & Credits
-Licensed under **MIT**. Built with ❤️ using LangChain, Gemini 3.1, and the Model Context Protocol.
-
-**Happy Presenting!** ✦🪄🎥
