@@ -12,6 +12,8 @@ workspace/
 memory/
 *.pptx
 *.log
+run_quick.bat
+run.bat
 
 # ── VS Code / IDE ──
 .vscode/
