@@ -1,3 +1,4 @@
+#documentation for agent_ppt.py
 """
 agent_ppt.py
 ------------
@@ -17,7 +18,7 @@ Usage:
   python agent_ppt.py "Create a 5-slide presentation on the life cycle of a star"
   python agent_ppt.py   (interactive mode)
 """
-
+#importing required libraries
 import json
 import logging
 import os
